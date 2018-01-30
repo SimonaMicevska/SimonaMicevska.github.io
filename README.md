@@ -1,2 +1,1 @@
-# SimonaMicevska.github.io
-Splicing literature review
+# Splicing literature review
