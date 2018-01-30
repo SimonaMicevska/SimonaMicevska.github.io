@@ -3,51 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <title>Splicing literature review</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" >
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
 
     <style>
-        #mainTable{
-            table-layout: fixed;
-            width: 2000px;
-            word-wrap: break-word;
-        }
-        .biggerColumn{
-            width: 10%;
-        }
-        .bigColumn{
-            width: 7%;
+        * {
+            font-family: 'Ubuntu', sans-serif;
         }
         #body{
             margin-left: 10px;
+        }
+        th, td{
+            text-align: center;
+        }
+
+        th{
+            vertical-align: middle;
+        }
+
+        #mainTable{
+            table-layout: fixed;
+            width: 3500px;
+            word-wrap: break-word;
+        }
+        .col1{
+            width: 155px;
+        }
+        .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11{
+            width: 155px;
+        }
+        .col12{
+            width: 350px;
+        }
+        .col13{
+            width: 255px;
+        }
+        .col14{
+            width: 155px;
+        }
+        .col15{
+            width: 250px;
+        }
+        .col16{
+            width: 155px;
+        }
+        .col17{
+            width: 450px;
         }
     </style>
 </head>
 <body>
 <div class="container-fluid" id="body">
-    <div class="row">
+    <div class="row" style="margin-bottom: 20px;">
         <h2>Splicing literature review</h2>
     </div>
     <div class="row">
         <table class="table" id="mainTable">
             <thead>
-                <th class="biggerColumn">Method</th>
-                <th>Binary splicing events</th>
-                <th>Complex splicing events</th>
-                <th>Retained introns</th>
-                <th>5' UTR length</th>
-                <th>3' UTR length</th>
-                <th class="bigColumn">Alternative first exon</th>
-                <th class="bigColumn">Alternative last exon</th>
-                <th>RNA-seq input</th>
-                <th>Annotation input</th>
-                <th>RNA-seq reads</th>
-                <th class="biggerColumn">Interpretation</th>
-                <th>DOI</th>
-                <th>Publication date</th>
-                <th>Link to software</th>
-                <th>Last updated</th>
-                <th class="biggerColumn">Summary</th>
+            <tr>
+                <th class="col1 align-middle">Method</th>
+                <th class="col2 align-middle">Binary splicing events</th>
+                <th class="col3 align-middle">Complex splicing events</th>
+                <th class="col4 align-middle">Retained introns</th>
+                <th class="col5 align-middle">5' UTR length</th>
+                <th class="col6 align-middle">3' UTR length</th>
+                <th class="col7 align-middle">Alternative first exon</th>
+                <th class="col8 align-middle">Alternative last exon</th>
+                <th class="col9 align-middle">RNA-seq input</th>
+                <th class="col10 align-middle">Annotation input</th>
+                <th class="col11 align-middle">RNA-seq reads</th>
+                <th class="col12 align-middle">Interpretation - do we know what type of event is driving the signal?</th>
+                <th class="col13 align-middle">DOI</th>
+                <th class="col14 align-middle">Publication date</th>
+                <th class="col15 align-middle">Link to software</th>
+                <th class="col16 align-middle">Last updated</th>
+                <th class="col17 align-middle">Summary</th>
+            </tr>
             </thead>
             <tbody>
                 <tr>
@@ -142,6 +174,383 @@
                     <td class="lastUpdated">September 2017</td>
                     <td class="summary">
                         The work done with MAJIQ spans a wide spectrum of topics such as new formulation of transcriptome variations in units of local splicing variations(LSVs), algorithms for detecting, quantification and visualization of LSVs, genome wide map of LSVs and many other.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>MISO</b></td>
+                    <td class="binarySplicing">Known</td>
+                    <td class="complexSplicing">Known</td>
+                    <td class="retainedIntrons">Known</td>
+                    <td class="5UTRLength">N/A</td>
+                    <td class="3UTRLength">Known</td>
+                    <td class="firstExon">Known</td>
+                    <td class="lastExon">Known</td>
+                    <td class="rnaSeqInput">BAM alignment</td>
+                    <td class="annotationInput">Custom GTF</td>
+                    <td class="rnaSeqReads">read coverage + junction reads</td>
+                    <td class="interpretation">
+                        Yes - multiple predefined  event types.
+                    </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1038/nmeth.1528">10.1038/nmeth.1528</a></td>
+                    <td class="publicationDate">07.12.2010</td>
+                    <td class="linkToSoftware"><a href="http://genes.mit.edu/burgelab/miso/">http://genes.mit.edu/burgelab/miso/</a></td>
+                    <td class="lastUpdated">20.06.2017</td>
+                    <td class="summary">
+                        Estimates expression of alternatively spliced exons and isoforms and assesses confidence in these estimates
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>Derfinder</b></td>
+                    <td class="binarySplicing">Known + novel</td>
+                    <td class="complexSplicing">N/A</td>
+                    <td class="retainedIntrons">Known + novel</td>
+                    <td class="5UTRLength">Known + novel</td>
+                    <td class="3UTRLength">Known + novel</td>
+                    <td class="firstExon">Known + novel</td>
+                    <td class="lastExon">Known + novel</td>
+                    <td class="rnaSeqInput">BAM alignment or BigWig files</td>
+                    <td class="annotationInput">GTF</td>
+                    <td class="rnaSeqReads">read coverage</td>
+                    <td class="interpretation">
+                        No. Analysis is perfomed at the level of 'expressed regions', but it's not clear if the differences in expression are due to promoter usage, splicing or alternative polyaddenylation.
+                    </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1093/nar/gkw852">10.1093/nar/gkw852</a></td>
+                    <td class="publicationDate">25.01.2017</td>
+                    <td class="linkToSoftware"><a href="https://github.com/lcolladotor/derfinder">https://github.com/lcolladotor/derfinder</a></td>
+                    <td class="lastUpdated">20.01.2018</td>
+                    <td class="summary">
+                        Seeks to identify contiguous regions of the genome showing differential expression signal at single base resolution without relying on existing annotation or potentially inaccurate transcript assembly.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>SplAdder</b></td>
+                    <td class="binarySplicing">Known + novel</td>
+                    <td class="complexSplicing">Known + novel</td>
+                    <td class="retainedIntrons">Known + novel</td>
+                    <td class="5UTRLength">Known + novel</td>
+                    <td class="3UTRLength">Known + novel</td>
+                    <td class="firstExon">N/A</td>
+                    <td class="lastExon">N/A</td>
+                    <td class="rnaSeqInput">BAM alignment</td>
+                    <td class="annotationInput">GFF</td>
+                    <td class="rnaSeqReads">read coverage + junction reads</td>
+                    <td class="interpretation">
+                        Yes - several predefined event types.
+                    </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1093/bioinformatics/btw054">10.1093/bioinformatics/btw054</a></td>
+                    <td class="publicationDate">11.02.2016</td>
+                    <td class="linkToSoftware"><a href="https://github.com/ratschlab/spladder">https://github.com/ratschlab/spladder</a></td>
+                    <td class="lastUpdated">27.04.2016</td>
+                    <td class="summary">
+                        None of the existing approaches combines all aspects of the SplAdder workflow: the augmentation of existing annotation information, the detection and quantification of alternative splicing events, differential testing of events between two given sets of samples and detailed visualization of the splicing variation.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>REUC/RSIC</b></td>
+                    <td class="binarySplicing">Known</td>
+                    <td class="complexSplicing">N/A</td>
+                    <td class="retainedIntrons">N/A</td>
+                    <td class="5UTRLength">N/A</td>
+                    <td class="3UTRLength">N/A</td>
+                    <td class="firstExon">Known</td>
+                    <td class="lastExon">Known</td>
+                    <td class="rnaSeqInput">BAM alignment</td>
+                    <td class="annotationInput">ENSEMBL annotation</td>
+                    <td class="rnaSeqReads">junction reads</td>
+                    <td class="interpretation">
+                        Yes - distinguishes between changes caused by splicing and changes caused by alternative first/last exons.
+                    </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1093/nar/gkx1165">10.1093/nar/gkx1165</a></td>
+                    <td class="publicationDate">30.11.2017</td>
+                    <td class="linkToSoftware"><a href="https://github.com/areyesq89/HumanTissuesDEU">https://github.com/areyesq89/HumanTissuesDEU</a></td>
+                    <td class="lastUpdated">21.11.2017</td>
+                    <td class="summary">
+                        The authors found that about half of the expressed genes displayed tissue-dependent transcript isoforms. Alternative transcription start
+                        and termination sites, rather than alternative splicing, accounted for the majority of tissue-dependent exon usage.
+                        In addition, their results indicate that most tissuedependent splicing involves untranslated exons and therefore may not increase proteome complexity.
+                        Thus, alternative transcription start and termination sites are the principal drivers of transcript isoform diversity across tissues, and may underlie the majority of cell type specific proteomes and functions.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>Vast-tools</b></td>
+                    <td class="binarySplicing">Known + novel</td>
+                    <td class="complexSplicing">Known + novel</td>
+                    <td class="retainedIntrons">Known + novel</td>
+                    <td class="5UTRLength">N/A</td>
+                    <td class="3UTRLength">N/A</td>
+                    <td class="firstExon">N/A</td>
+                    <td class="lastExon">N/A</td>
+                    <td class="rnaSeqInput">FASTQ</td>
+                    <td class="annotationInput">Custom annotation (VastDB)</td>
+                    <td class="rnaSeqReads">read coverage</td>
+                    <td class="interpretation">
+                        Yes.
+                    </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1093/nar/gkx1165">10.1093/nar/gkx1165</a></td>
+                    <td class="publicationDate">30.11.2017</td>
+                    <td class="linkToSoftware"><a href="https://github.com/areyesq89/HumanTissuesDEU">https://github.com/areyesq89/HumanTissuesDEU</a></td>
+                    <td class="lastUpdated">21.11.2017</td>
+                    <td class="summary">
+                        The authors found that about half of the expressed genes displayed tissue-dependent transcript isoforms. Alternative transcription start
+                        and termination sites, rather than alternative splicing, accounted for the majority of tissue-dependent exon usage.
+                        In addition, their results indicate that most tissuedependent splicing involves untranslated exons and therefore may not increase proteome complexity.
+                        Thus, alternative transcription start and termination sites are the principal drivers of transcript isoform diversity across tissues, and may underlie the majority of cell type specific proteomes and functions.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>Whippet</b></td>
+                    <td class="binarySplicing">Known + novel</td>
+                    <td class="complexSplicing">Known + novel</td>
+                    <td class="retainedIntrons">Known + novel</td>
+                    <td class="5UTRLength">Known + novel</td>
+                    <td class="3UTRLength">Known + novel</td>
+                    <td class="firstExon">Known + novel</td>
+                    <td class="lastExon">Known + novel</td>
+                    <td class="rnaSeqInput">FASTA</td>
+                    <td class="annotationInput">GTF or Refflat format</td>
+                    <td class="rnaSeqReads">junction reads</td>
+                    <td class="interpretation">
+                        Yes - multiple predefined event types.
+                    </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1101/158519">10.1101/158519</a></td>
+                    <td class="publicationDate">03.07.2017</td>
+                    <td class="linkToSoftware"><a href="https://github.com/timbitz/Whippet.jl">https://github.com/timbitz/Whippet.jl</a></td>
+                    <td class="lastUpdated">19.01.2018</td>
+                    <td class="summary">
+                        Whippet is a method that rapidly and with minimal hardware requirements, models and quantifies splicing events of any complexity without significant loss of accuracy. Using an entropic measure of splicing complexity, Whippet reveals that approximately 33% of human protein coding genes contain complex AS events that result in substantial expression of multiple splice isoforms.  Whippet affords the rapid and accurate analysis of AS events of any complexity that can help facilitate biomedical research.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>PROMOTERS AND 3' ENDS</b></td>
+                </tr>
+                <tr>
+                    <td class="method"><b>Jonathan Göke’s alt promoter quantification</b></td>
+                    <td class="binarySplicing">N/A</td>
+                    <td class="complexSplicing">N/A</td>
+                    <td class="retainedIntrons">N/A</td>
+                    <td class="5UTRLength">N/A</td>
+                    <td class="3UTRLength">N/A</td>
+                    <td class="firstExon">Known</td>
+                    <td class="lastExon">N/A</td>
+                    <td class="rnaSeqInput">Transcriptome alignment</td>
+                    <td class="annotationInput">ENSEMBL v75 annotation</td>
+                    <td class="rnaSeqReads">junction reads</td>
+                    <td class="interpretation">
+                        Yes - alternative promoters.
+                    </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1101/176487">10.1101/176487</a></td>
+                    <td class="publicationDate">15.08.2017</td>
+                    <td class="linkToSoftware"><a href="#">N/A</a></td>
+                    <td class="lastUpdated">November 2017</td>
+                    <td class="summary">
+                        By using RNA-Seq data, their approach enables the analysis of promoter activity in the PCAWG cohort without the need for additional experiments.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>DaPars</b></td>
+                    <td class="binarySplicing">N/A</td>
+                    <td class="complexSplicing">N/A</td>
+                    <td class="retainedIntrons">N/A</td>
+                    <td class="5UTRLength">N/A</td>
+                    <td class="3UTRLength">Novel</td>
+                    <td class="firstExon">N/A</td>
+                    <td class="lastExon">N/A</td>
+                    <td class="rnaSeqInput">Transcriptome alignment</td>
+                    <td class="annotationInput">GTF</td>
+                    <td class="rnaSeqReads">read coverage</td>
+                    <td class="interpretation">
+                        Yes - changes in poly(A) site usage
+                    </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1038/ncomms6274">10.1038/ncomms6274</a></td>
+                    <td class="publicationDate">20.11.2014</td>
+                    <td class="linkToSoftware"><a href="https://github.com/ZhengXia/dapars">https://github.com/ZhengXia/dapars</a></td>
+                    <td class="lastUpdated">06.11.2015</td>
+                    <td class="summary">
+                        Algorithm for the de novo identification of dynamic alternative polyadenylation (APA) from standard RNA-seq which directly infers APA events through the comparison of standard RNA-seq between different conditions.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>APATrap</b></td>
+                    <td class="binarySplicing">N/A</td>
+                    <td class="complexSplicing">N/A</td>
+                    <td class="retainedIntrons">N/A</td>
+                    <td class="5UTRLength">N/A</td>
+                    <td class="3UTRLength">Known + novel</td>
+                    <td class="firstExon">N/A</td>
+                    <td class="lastExon">N/A</td>
+                    <td class="rnaSeqInput">Read coverage
+                        (bedgraph or wig format)</td>
+                    <td class="annotationInput">Gene model file in BED-format</td>
+                    <td class="rnaSeqReads">read coverage</td>
+                    <td class="interpretation">
+                        Yes - changes in poly(A) site usage
+                    </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1042/BST20140054">10.1042/BST20140054</a></td>
+                    <td class="publicationDate">18.01.2018</td>
+                    <td class="linkToSoftware"><a href="https://github.com/ZhengXia/dapars">https://github.com/ZhengXia/dapars</a></td>
+                    <td class="lastUpdated">18.12.2017</td>
+                    <td class="summary">
+                        Based on the mean squared error model to identify and quantify APA sites from RNA-seq data this approach is capable of identifying novel 3' UTRs and 3' UTR extensions which contributes to locating potentialy poly(A) sites in previously overlooked regions, and improving genome annotations.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>PAQR</b></td>
+                    <td class="binarySplicing">N/A</td>
+                    <td class="complexSplicing">N/A</td>
+                    <td class="retainedIntrons">N/A</td>
+                    <td class="5UTRLength">N/A</td>
+                    <td class="3UTRLength">Known + novel</td>
+                    <td class="firstExon">N/A</td>
+                    <td class="lastExon">N/A</td>
+                    <td class="rnaSeqInput">BAM alignment</td>
+                    <td class="annotationInput">PolyA sites in BED-format</td>
+                    <td class="rnaSeqReads">read coverage</td>
+                    <td class="interpretation">
+                        Yes - changes in poly(A) site usage
+                    </td>
+                    <td class="linkToPublication"><a href="http://dx.doi.org/10.1101/195958">10.1101/195958</a></td>
+                    <td class="publicationDate">29.09.2017</td>
+                    <td class="linkToSoftware"><a href="https://github.com/SciLifeLab/NGI-RNAseq">https://github.com/SciLifeLab/NGI-RNAseq</a></td>
+                    <td class="lastUpdated">19.01.2018</td>
+                    <td class="summary">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>TRANSCRIPT QUANTIFICATION</b></td>
+                </tr>
+                <tr>
+                    <td class="method"><b>Salmon</b></td>
+                    <td class="binarySplicing">Known</td>
+                    <td class="complexSplicing">Known</td>
+                    <td class="retainedIntrons">Known</td>
+                    <td class="5UTRLength">Known</td>
+                    <td class="3UTRLength">Known</td>
+                    <td class="firstExon">Known</td>
+                    <td class="lastExon">Known</td>
+                    <td class="rnaSeqInput">FASTQ</td>
+                    <td class="annotationInput">GTF</td>
+                    <td class="rnaSeqReads">read coverage + junction reads</td>
+                    <td class="interpretation">
+                        No
+                    </td>
+                    <td class="linkToPublication"><a href="http://doi.org/10.1038/nmeth.4197">10.1038/nmeth.4197</a></td>
+                    <td class="publicationDate">14.04.2017</td>
+                    <td class="linkToSoftware"><a href="https://github.com/COMBINE-lab/salmon/blob/master/doc/source/salmon.rst">https://github.com/COMBINE-lab/salmon/blob/master/doc/source/salmon.rst</a></td>
+                    <td class="lastUpdated">05.09.2017</td>
+                    <td class="summary">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>Kallisto</b></td>
+                    <td class="binarySplicing">Known</td>
+                    <td class="complexSplicing">Known</td>
+                    <td class="retainedIntrons">Known</td>
+                    <td class="5UTRLength">Known</td>
+                    <td class="3UTRLength">Known</td>
+                    <td class="firstExon">Known</td>
+                    <td class="lastExon">Known</td>
+                    <td class="rnaSeqInput">FASTQ/BAM alignment</td>
+                    <td class="annotationInput">GTF</td>
+                    <td class="rnaSeqReads">read coverage + junction reads</td>
+                    <td class="interpretation">
+                        No
+                    </td>
+                    <td class="linkToPublication"><a href="http://doi.org/10.1038/nbt.3519">10.1038/nbt.3519</a></td>
+                    <td class="publicationDate">04.04.2016</td>
+                    <td class="linkToSoftware"><a href="https://github.com/pachterlab/kallisto">https://github.com/pachterlab/kallisto</a></td>
+                    <td class="lastUpdated">26.01.2018</td>
+                    <td class="summary">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>Cufflinks</b></td>
+                    <td class="binarySplicing">Known</td>
+                    <td class="complexSplicing">Known</td>
+                    <td class="retainedIntrons">Known</td>
+                    <td class="5UTRLength">Known</td>
+                    <td class="3UTRLength">Known</td>
+                    <td class="firstExon">Known</td>
+                    <td class="lastExon">Known</td>
+                    <td class="rnaSeqInput">FASTQ</td>
+                    <td class="annotationInput">GTF</td>
+                    <td class="rnaSeqReads">read coverage + junction reads</td>
+                    <td class="interpretation">
+                        No
+                    </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1371/journal.pone.0103207">10.1371/journal.pone.0103207</a></td>
+                    <td class="publicationDate">13.08.2014</td>
+                    <td class="linkToSoftware"><a href="https://github.com/cole-trapnell-lab/cufflinks">https://github.com/cole-trapnell-lab/cufflinks</a></td>
+                    <td class="lastUpdated">24.09.2017</td>
+                    <td class="summary">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>TRANSCRIPT ASSEMBLY</b></td>
+                </tr>
+                <tr>
+                    <td class="method"><b>Cufflinks</b></td>
+                    <td class="binarySplicing">Known + novel</td>
+                    <td class="complexSplicing">Known + novel</td>
+                    <td class="retainedIntrons">Known + novel</td>
+                    <td class="5UTRLength">Known + novel</td>
+                    <td class="3UTRLength">Known + novel</td>
+                    <td class="firstExon">Known + novel</td>
+                    <td class="lastExon">Known + novel</td>
+                    <td class="rnaSeqInput">BAM alignment</td>
+                    <td class="annotationInput">GTF</td>
+                    <td class="rnaSeqReads">read coverage + junction reads</td>
+                    <td class="interpretation">
+                        No
+                    </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1371/journal.pone.0103207">10.1371/journal.pone.0103207</a></td>
+                    <td class="publicationDate">13.08.2014</td>
+                    <td class="linkToSoftware"><a href="https://github.com/cole-trapnell-lab/cufflinks">https://github.com/cole-trapnell-lab/cufflinks</a></td>
+                    <td class="lastUpdated">24.09.2017</td>
+                    <td class="summary">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>StringTie</b></td>
+                    <td class="binarySplicing">Known + novel</td>
+                    <td class="complexSplicing">Known + novel</td>
+                    <td class="retainedIntrons">Known + novel</td>
+                    <td class="5UTRLength">Known + novel</td>
+                    <td class="3UTRLength">Known + novel</td>
+                    <td class="firstExon">Known + novel</td>
+                    <td class="lastExon">Known + novel</td>
+                    <td class="rnaSeqInput">BAM alignment</td>
+                    <td class="annotationInput">GTF</td>
+                    <td class="rnaSeqReads">read coverage + junction reads</td>
+                    <td class="interpretation">
+                        No
+                    </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1038/nbt.3122">10.1038/nbt.3122</a></td>
+                    <td class="publicationDate">18.02.2015</td>
+                    <td class="linkToSoftware"><a href="https://github.com/gpertea/stringtie">https://github.com/gpertea/stringtie</a></td>
+                    <td class="lastUpdated">14.12.2017</td>
+                    <td class="summary">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>Scallop</b></td>
+                    <td class="binarySplicing">Known + novel</td>
+                    <td class="complexSplicing">Known + novel</td>
+                    <td class="retainedIntrons">Known + novel</td>
+                    <td class="5UTRLength">Known + novel</td>
+                    <td class="3UTRLength">Known + novel</td>
+                    <td class="firstExon">Known + novel</td>
+                    <td class="lastExon">Known + novel</td>
+                    <td class="rnaSeqInput">BAM alignment</td>
+                    <td class="annotationInput">GTF</td>
+                    <td class="rnaSeqReads">read coverage + junction reads</td>
+                    <td class="interpretation">
+                        No
+                    </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1038/nbt.4020">10.1038/nbt.4020</a></td>
+                    <td class="publicationDate">13.10.2017</td>
+                    <td class="linkToSoftware"><a href="https://github.com/Kingsford-Group/scallop">https://github.com/Kingsford-Group/scallop</a></td>
+                    <td class="lastUpdated">20.12.2017</td>
+                    <td class="summary">
                     </td>
                 </tr>
             </tbody>
