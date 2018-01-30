@@ -3,8 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <title>Splicing literature review</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+    <style>
+        #mainTable{
+            table-layout: fixed;
+            width: 2000px;
+            word-wrap: break-word;
+        }
+        .biggerColumn{
+            width: 10%;
+        }
+        .bigColumn{
+            width: 7%;
+        }
+        #body{
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
-<h1>Splicing literature review</h1>
+<div class="container-fluid" id="body">
+    <div class="row">
+        <h2>Splicing literature review</h2>
+    </div>
+    <div class="row">
+        <table class="table" id="mainTable">
+            <thead>
+                <th class="biggerColumn">Method</th>
+                <th>Binary splicing events</th>
+                <th>Complex splicing events</th>
+                <th>Retained introns</th>
+                <th>5' UTR length</th>
+                <th>3' UTR length</th>
+                <th class="bigColumn">Alternative first exon</th>
+                <th class="bigColumn">Alternative last exon</th>
+                <th>RNA-seq input</th>
+                <th>Annotation input</th>
+                <th>RNA-seq reads</th>
+                <th class="biggerColumn">Interpretation</th>
+                <th>DOI</th>
+                <th>Publication date</th>
+                <th>Link to software</th>
+                <th>Last updated</th>
+                <th class="biggerColumn">Summary</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>TRANSCRIPTION EVENTS</b></td>
+                </tr>
+                <tr>
+                    <td class="method"><b>Altrans</b></td>
+                    <td class="binarySplicing">Known + novel</td>
+                    <td class="complexSplicing">N/A</td>
+                    <td class="retainedIntrons">Known + novel</td>
+                    <td class="5UTRLength">Known + novel</td>
+                    <td class="3UTRLength">Known + novel</td>
+                    <td class="firstExon">Known + novel</td>
+                    <td class="lastExon">Known + novel</td>
+                    <td class="rnaSeqInput">BAM alignment</td>
+                    <td class="annotationInput">GTF</td>
+                    <td class="rnaSeqReads">junction reads</td>
+                    <td class="interpretation">The majority (66%) of the signal that Altrans
+                        captures is due to exon skipping events followed by alternative
+                        50 and 30 UTRs (15% and 11%, respectively)</td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1016/j.ajhg.2015.09.004">10.1016/j.ajhg.2015.09.004</a></td>
+                    <td class="publicationDate">01.10.2015</td>
+                    <td class="linkToSoftware"><a href="https://omictools.com/altrans-tool">https://omictools.com/altrans-tool</a></td>
+                    <td class="lastUpdated">2018</td>
+                    <td class="summary">After it is run, it is determined that in the presence of unannotated transcripts, Altrans performs better in quantifications</td>
+                </tr>
+                <tr>
+                    <td class="method"><b>DEXSeq</b></td>
+                    <td class="binarySplicing">Known</td>
+                    <td class="complexSplicing">N/A</td>
+                    <td class="retainedIntrons">Known</td>
+                    <td class="5UTRLength">Known</td>
+                    <td class="3UTRLength">Known</td>
+                    <td class="firstExon">Known</td>
+                    <td class="lastExon">Known</td>
+                    <td class="rnaSeqInput">BAM alignment</td>
+                    <td class="annotationInput">GTF</td>
+                    <td class="rnaSeqReads">read coverage</td>
+                    <td class="interpretation">The interpretation of the results of this method is straightforward
+                        when a single exon of a gene with many exons is called differentially
+                        used. However, if many exons within a gene are affected, the
+                        interpretation is more complex. </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1101/gr.133744.111">10.1101/gr.133744.111</a></td>
+                    <td class="publicationDate">22.10.2012</td>
+                    <td class="linkToSoftware"><a href="http://bioconductor.org/packages/release/bioc/html/DEXSeq.html">http://bioconductor.org/packages/release/bioc/html/DEXSeq.html</a></td>
+                    <td class="lastUpdated">2018</td>
+                    <td class="summary">
+                        It detects exons that are subject to differential exon usage.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>LeafCutter</b></td>
+                    <td class="binarySplicing">Known + novel</td>
+                    <td class="complexSplicing">Known + novel</td>
+                    <td class="retainedIntrons">N/A</td>
+                    <td class="5UTRLength">N/A</td>
+                    <td class="3UTRLength">N/A</td>
+                    <td class="firstExon">Known + novel</td>
+                    <td class="lastExon">Known + novel</td>
+                    <td class="rnaSeqInput">BAM alignment</td>
+                    <td class="annotationInput">GTF</td>
+                    <td class="rnaSeqReads">junction reads</td>
+                    <td class="interpretation">
+                        Only detects event that manifest at level of exon-exon junctions. Does not distinguish between alternative first/last exons and other splicing events.
+                    </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.1101/044107">10.1101/044107</a></td>
+                    <td class="publicationDate">16.03.2016</td>
+                    <td class="linkToSoftware"><a href="http://bioconductor.org/packages/release/bioc/html/DEXSeq.html">http://bioconductor.org/packages/release/bioc/html/DEXSeq.html</a></td>
+                    <td class="lastUpdated">05.01.2018</td>
+                    <td class="summary">
+                        It focuses on alternative splicing events, including skipped exons, 5′ and 3′ alternative splice-site usage, and additional complex events that can be summarized by differences in intron excision.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method"><b>MAJIQ</b></td>
+                    <td class="binarySplicing">Known + novel</td>
+                    <td class="complexSplicing">Known + novel</td>
+                    <td class="retainedIntrons">Known + novel</td>
+                    <td class="5UTRLength">N/A</td>
+                    <td class="3UTRLength">N/A</td>
+                    <td class="firstExon">Known + novel</td>
+                    <td class="lastExon">Known + novel</td>
+                    <td class="rnaSeqInput">BAM alignment</td>
+                    <td class="annotationInput">GFF3</td>
+                    <td class="rnaSeqReads">junction reads</td>
+                    <td class="interpretation">
+                        Only detects event that manifest at level of exon-exon junctions. Does not distinguish between alternative first/last exons and other splicing events.
+                    </td>
+                    <td class="linkToPublication"><a href="https://doi.org/10.7554/eLife.11752">10.7554/eLife.11752</a></td>
+                    <td class="publicationDate">05.01.2016</td>
+                    <td class="linkToSoftware"><a href="https://majiq.biociphers.org/">https://majiq.biociphers.org/</a></td>
+                    <td class="lastUpdated">September 2017</td>
+                    <td class="summary">
+                        The work done with MAJIQ spans a wide spectrum of topics such as new formulation of transcriptome variations in units of local splicing variations(LSVs), algorithms for detecting, quantification and visualization of LSVs, genome wide map of LSVs and many other.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 </body>
 </html>
